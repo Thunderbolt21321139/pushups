@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const pushupInput = document.getElementById('pushupInput');
     const newWorkoutButton = document.getElementById('newWorkoutButton');
+    const clearDataButton = document.getElementById('clearDataButton');
     const workoutChartCtx = document.getElementById('workoutChart').getContext('2d');
     let workoutChart;
 
@@ -44,5 +45,11 @@ document.addEventListener('DOMContentLoaded', () => {
             updateWorkoutChart();
             pushupInput.value = '';
         }
+    });
+
+    clearDataButton.addEventListener('click', () => {
+        localStorage.removeItem('workoutHistory');
+        workoutHistory = [];
+        updateWorkoutChart();
     });
 });

@@ -36,13 +36,24 @@ button {
     cursor: pointer;
     border: none;
     border-radius: 5px;
-    background-color: #28a745;
     color: white;
     transition: background-color 0.3s ease;
 }
 
-button:hover {
+#newWorkoutButton {
+    background-color: #28a745;
+}
+
+#newWorkoutButton:hover {
     background-color: #218838;
+}
+
+#clearDataButton {
+    background-color: #dc3545;
+}
+
+#clearDataButton:hover {
+    background-color: #c82333;
 }
 
 #workoutChart {
